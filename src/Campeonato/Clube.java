@@ -26,7 +26,7 @@ public class Clube {
 
     public void perder(int saldoPartida){
 
-        this.saldoGols -= saldoPartida;
+        this.saldoGols += saldoPartida;
 
         return;
     }

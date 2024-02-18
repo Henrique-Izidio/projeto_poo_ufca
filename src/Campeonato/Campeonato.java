@@ -15,12 +15,15 @@ public class Campeonato {
     }
 
     public void jogarCampeonato() {
+
         clubes.forEach((clube_1) -> {
 
             clubes.forEach((clube_2)-> {
 
                 if(clube_1.nome != clube_2.nome){
 
+                    System.out.println("==================================");
+                    
                     jogarPartida(clube_1, clube_2);
 
                 }
@@ -39,18 +42,31 @@ public class Campeonato {
         int golsClube1 = rand.nextInt(6);
         int golsClube2 = rand.nextInt(6);
 
-        if (golsClube1 > golsClube2) {
-            clube_1.ganhar(golsClube1 - golsClube2);
+        System.out.println(clube_1.nome + ": " + golsClube1 + " gols");
+        System.out.println(clube_2.nome + ": " + golsClube2 + " gols");
+        System.out.print("Vencedor:");
 
-            clube_2.perder(golsClube1 - golsClube2);
+        if (golsClube1 > golsClube2) {
+
+            System.out.println(clube_1.nome);
+            
+            clube_1.ganhar(golsClube1 - golsClube2);
+            
+            clube_2.perder(golsClube2 - golsClube1);
             
         }else if (golsClube1 < golsClube2) {
+
+            System.out.println(clube_2.nome);
+
             clube_1.perder(golsClube1 - golsClube2);
             
             clube_2.ganhar(golsClube2 - golsClube1);
             
         }else {
+            System.out.println("empate!");
+        
             clube_1.empatar();
+
             clube_2.empatar();
         }
 

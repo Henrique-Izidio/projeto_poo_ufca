@@ -32,6 +32,7 @@ public class Main {
 
         Clube campeao = campeonato.getCampeao();
 
+        System.out.println("===========================");
         System.out.println("!!!PARABENS AO VENCEDOR!!!");
         System.out.println(campeao.nome);
         System.out.println("Pontos: " + campeao.pontos);
