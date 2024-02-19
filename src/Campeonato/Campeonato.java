@@ -14,12 +14,12 @@ public class Campeonato {
         this.clubes = clubes;
     }
 
-    public void jogarCampeonato() {
+    public boolean jogarCampeonato() {
 
         if (this.clubes.size() == 0) {
             System.out.println("==================================");
             System.out.println("Não há times para o campeonato");
-            return;
+            return false;
         }
 
         clubes.forEach((clube_1) -> {
@@ -38,7 +38,7 @@ public class Campeonato {
 
         });
 
-        return;
+        return true;
     }
 
     private void jogarPartida(Clube clube_1, Clube clube_2){

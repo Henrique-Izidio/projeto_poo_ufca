@@ -26,7 +26,9 @@ public class Main {
 
         Campeonato campeonato = new Campeonato(clubes);
 
-        campeonato.jogarCampeonato();
+        boolean jogou = campeonato.jogarCampeonato();
+
+        if(!jogou) return;
 
         ArrayList<String> classificacao = campeonato.getClassificacao();
 
