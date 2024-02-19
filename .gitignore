@@ -1,2 +1,2 @@
 # ignorar build
-/build/**
+/build/*
