@@ -82,7 +82,7 @@ public class Campeonato {
 
     public ArrayList<String> getClassificacao(){
 
-        ordenar(this.clubes);
+        this.clubes = ordenar(this.clubes);
 
         ArrayList<String> classifacacao = new ArrayList<String>();
 
