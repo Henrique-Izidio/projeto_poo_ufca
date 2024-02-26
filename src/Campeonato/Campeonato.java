@@ -22,21 +22,18 @@ public class Campeonato {
             return false;
         }
 
-        clubes.forEach((clube_1) -> {
+        int count = 0;
 
-            clubes.forEach((clube_2)-> {
-
-                if(clube_1.nome != clube_2.nome){
-
-                    System.out.println("==================================");
-                    
-                    jogarPartida(clube_1, clube_2);
-
-                }
-
-            });
-
-        });
+        for (Clube clube_1 : clubes) {
+            for (Clube clube_2 : clubes) {
+                if (clube_1.nome == clube_2.nome) continue;
+                count++;
+                System.out.print("======== ");
+                System.out.print(count + "º Partida");
+                System.out.print(" ========\n");
+                jogarPartida(clube_1, clube_2);
+            }
+        }
 
         return true;
     }
